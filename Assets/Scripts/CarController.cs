@@ -56,13 +56,13 @@ public class CarController : MonoBehaviour {
     {
         //bool pressed = false;
         //float turnTarget = (pressed == false) ? 0 : 1f;
-        SetSteering();
+        //SetSteering();
 
         float motor = maxMotorTorque * Input.GetAxis("Vertical");
-        float steering = steeringModifier * maxSteeringAngle;//maxSteeringAngle * Input.GetAxis("Horizontal");
-        Debug.Log("steering input: " + Input.GetAxis("Horizontal"));
-        Debug.Log("steeringRaw input: " + Input.GetAxisRaw("Horizontal"));
-        Debug.Log("steering value: " + steeringModifier);
+        float steering = /*steeringModifier * maxSteeringAngle;*/maxSteeringAngle * Input.GetAxis("Horizontal");
+       // Debug.Log("steering input: " + Input.GetAxis("Horizontal"));
+       // Debug.Log("steeringRaw input: " + Input.GetAxisRaw("Horizontal"));
+       // Debug.Log("steering value: " + steeringModifier);
 
         foreach (AxleInfo axleInfo in axleInfos)
         {
